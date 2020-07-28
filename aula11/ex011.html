@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Não</title>
+</head>
+
+<body>
+    <h1>Sistema de verificação de cidadão</h1>
+    Qual o país de origem?<input type="text" name="txtver" id="txtver">
+    <input type="button" value="Verificar" onclick="verificando()">
+    <div id="res"></div>
+
+    <script>
+        function verificando() {
+            var resp = window.document.querySelector('input#txtver')
+            var result = window.document.querySelector('div#res')
+            res.innerHTML = `Bem vindo de volta ao Brasil`
+
+            if (resp != 'Brasil') {
+                res.innerHTML = `Você é um estrangeiro de ${result}. Aproveite a sua estada do Brasil
+             `
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
