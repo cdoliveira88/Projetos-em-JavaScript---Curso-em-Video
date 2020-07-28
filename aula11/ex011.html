@@ -9,22 +9,23 @@
 
 <body>
     <h1>Sistema de verificação de cidadão</h1>
-    Qual o país de origem?<input type="text" name="txtver" id="txtver">
-    <input type="button" value="Verificar" onclick="verificando()">
+    Qual o país de origem?<input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="validando()">
     <div id="res"></div>
 
     <script>
-        function verificando() {
-            var resp = window.document.querySelector('input#txtver')
-            var result = window.document.querySelector('div#res')
-            res.innerHTML = `Bem vindo de volta ao Brasil`
+        function validando() {
+            var pais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var ver = String(pais.value)
 
-            if (resp != 'Brasil') {
-                res.innerHTML = `Você é um estrangeiro de ${result}. Aproveite a sua estada do Brasil
-             `
-
-
+            if (ver != 'Brasil') {
+                res.innerHTML = `<p>Olá estrangeiro do(a) ${ver}, seja muito bem vindo ao Brasil. Desejamos uma ótima estada para você em nosso país.</p>`
+            } else {
+                res.innerHTML = `<p>Olá, Bem vindo de volta ao Brasil! Desejamos uma ótima estada à você</p>`
             }
+
+
         }
     </script>
 
